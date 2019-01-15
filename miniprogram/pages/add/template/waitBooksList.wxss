@@ -1,0 +1,59 @@
+.book {
+  position: relative;
+  width: 100%;
+  height: 280rpx;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.book .line {
+  position: absolute;
+  height: 1px;
+  background-color: #eee;
+  left: 20rpx;
+  bottom: 0;
+  right: 20rpx ;
+}
+.image {
+  height: 240rpx;
+  width: 180rpx;
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 20rpx;
+}
+.top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-bottom {
+  color: #ffc09f;
+  font-size: 17px;
+}
+.info .top text:first-of-type {
+  font-size: 17px;
+  color: #333;
+}
+
+.info .top text:nth-of-type(2) {
+  font-size: 14px;
+  color: #999;
+  margin-top: 10rpx;
+}
+.close image {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.cover {
+  background-color: #EEEEEE;
+}

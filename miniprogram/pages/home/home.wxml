@@ -1,0 +1,41 @@
+<view class='container'>
+  <view class='nav-bar'>
+    <view class='serch'>
+      <image></image>
+      <text>查找书记</text>
+    </view>
+    <view class='locate'>
+      <image></image>
+      <text>三峡大学</text>
+    </view>
+  </view>
+  <scroll-view class='content'>
+
+    <swiper>
+      <swiper-item>
+        <image>
+        </image>
+      </swiper-item>
+    </swiper>
+    
+    <view class='category'>
+      <view wx:for="{{}}">
+        <view class='category-item'>
+          <image></image>
+          <text></text>
+        </view>
+      </view>
+    </view>
+
+    <view class='book-section'>
+      <text class='section-header'></text>
+      <view class="books"></view>
+    </view>
+
+    <view class='book-section'>
+      <text class='section-header'></text>
+      <view class="boos"></view>
+    </view>
+
+  </scroll-view>
+</view>

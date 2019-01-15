@@ -1,0 +1,20 @@
+<template name="waitBooksList">
+  <scroll-view scroll-y>
+    <view wx:for="{{books}}" wx:key="isbn13" class="book" hover-class='cover'>
+      <image-pro src="{{item.image}}" class="image"></image-pro>
+      <view class='info'>
+        <view class='top'>
+          <text>{{item.title}}</text>
+          <text>{{item.author[0]}}</text>
+        </view>
+        <view class='info-bottom'>
+          <text>{{item.price}}</text>
+        </view>
+        <view class='close' catchtap='clickDelete' data-item='{{item}}'>
+          <image src="../../images/close.png" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class='line'></view>
+    </view>
+  </scroll-view>
+</template>

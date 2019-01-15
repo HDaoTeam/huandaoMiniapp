@@ -1,0 +1,36 @@
+<import src="template/waitBooksList.wxml"/>
+<import src="template/isbnInput.wxml"/>
+
+<view>
+  <view wx:if="{{books.length > 0}}">
+    <template is ="waitBooksList" data="{{books}}"></template>
+  </view>
+  <view wx:else>
+    <view wx:for="{{}}">
+      <view class='left'>
+        <image></image>
+      </view>
+      <view class='right'>
+        <text></text>
+        <text></text>
+      </view>
+    </view>
+    <view class='footer'>
+      <text>更多卖书规则 + {{ISBN}}</text>
+      <image></image>
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='scan' bindtap='scanISBN'>
+      <text>扫码卖书</text>
+    </view>
+    <view class='edit' bindtap='editISBN'>
+      <text>手动输入ISBN</text>
+    </view>
+  </view>
+  <view wx:if="{{showInput}}" class='isbnInput'>
+    <template is="isbnInput"></template>
+  </view>
+
+  
+</view>

@@ -1,0 +1,65 @@
+<!--miniprogram/pages/book/book.wxml-->
+<view class='container'>
+  <view class='header-bottom'>
+    <image src='{{book.image}}' class='blur' mode="aspectFill"></image>
+    <view class='image-cover'></view>
+  </view>
+  <scroll-view class='content' scroll-y>
+    <view class='header'>
+      <image-pro src="{{book.image}}" mode='widthFix'></image-pro>
+    </view>
+
+    <view class='info'>
+      <view class='title'>
+        <text>{{book.title}}</text>
+        <text>({{book.author}})</text>
+      </view>
+      <view class='price'>
+        <text>{{book.price}}</text>
+      </view>
+      <view class='info-item' wx:for="{{infoItems}}" wx:key="*this">
+        <text>{{item.key}}:</text>
+        <text>{{item.value}}</text>
+      </view>
+      <view class='guarantee'>
+        <view class='left'>
+          <image src='../../images/zan.png'></image>
+          <text>换到官方押金保证</text>
+        </view>
+        <view class='right'>
+          <image src='../../images/arrow_right.png'></image>
+        </view>
+      </view>
+      
+      <view class='detail' wx:for="{{}}">
+        <text>书籍简介</text>
+        <text>{{}}</text>
+        <view class='fold'>
+          <text>{{}}</text>
+        </view>
+      </view>
+
+      <view class='related'>
+        <text class='header-text'>相似推荐</text>
+        <view class='book-list'>
+          <view wx:for="{{relateds}}" wx:key="isbn13" class='book-list-item'>
+            <image-pro src="{{item.image}}"></image-pro>
+            <view class='book-info'><text>{{item.title}}</text></view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </scroll-view>
+  <view class='bottom'>
+    <view class='home bottom-item'>
+      <image src='../../images/shouye.png' mode='widthFix'></image>
+    </view>
+    <view class='cart bottom-item'>
+      <image src='../../images/gouwuche.png' mode='widthFix'></image>
+    </view>
+    <view class='add-cart'>
+      <text>加入购物袋</text>
+    </view>
+  </view>
+</view>

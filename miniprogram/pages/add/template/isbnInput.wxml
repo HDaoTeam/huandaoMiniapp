@@ -1,0 +1,21 @@
+<template name="isbnInput">
+  <view class='input-bg ' bindtap=''>
+    <view class='input-content'>
+      <view class='input-header'>
+        <text>手动输入条形码</text>
+      </view>
+      <view class='input-example'>
+        <image src='../../images/isbn.jpg' mode='widthFix'></image>
+      </view>
+      <view class='input-input'>
+        <input placeholder='输入ISBN码' bindinput='didInput'></input>
+      </view>
+      <view class='input-submit' bindtap='endInput'>
+        <text>确认</text>
+      </view>
+      <view class='input-close' bindtap='dismissInput'>
+        <image src="../../images/close.png"></image>
+      </view>
+    </view>
+  </view>
+</template>
