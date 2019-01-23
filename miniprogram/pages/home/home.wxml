@@ -1,40 +1,54 @@
 <view class='container'>
   <view class='nav-bar'>
-    <view class='serch'>
-      <image></image>
-      <text>查找书记</text>
+    <view class='search'>
+      <image src='../../images/sousuo.png'></image>
+      <text>查找</text>
     </view>
     <view class='locate'>
-      <image></image>
+      <image src='../../images/wxbdingwei.png'></image>
       <text>三峡大学</text>
     </view>
   </view>
   <scroll-view class='content'>
-
-    <swiper>
-      <swiper-item>
-        <image>
+    <swiper class='banner' interval='3000' duration='500' circular autoplay indicator-dots indicator-color="#eeeeee" indicator-active-color="#bbbbbb">
+      <swiper-item wx:for="{{banners}}" wx:key="*this">
+        <image src='{{item}}' class='banner-image'>
         </image>
       </swiper-item>
     </swiper>
     
-    <view class='category'>
-      <view wx:for="{{}}">
-        <view class='category-item'>
-          <image></image>
-          <text></text>
+    <view class='major'>
+      <view class='section-header'><text>专业书籍</text></view>
+      <scroll-view scroll-x class='major-src'>
+        <view class='major-item' wx:for="{{major}}" hover-class='hover' wx:key="*this" bindtap='clickMajor' data-major="{{item}}">
+          <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1548237218633&di=e326a47536cd574748c1252a068597bf&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F8%2F5811b0c6d0ce6.jpg"></image>
+          <text>{{item.title}}</text>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class='book-section'>
+      <view class='section-header'><text>热门书籍</text></view>
+      <view class="books">
+        <view class='books-row' wx:for="{{books}}" wx:for-item="rows" wx:key="*this">
+          <view class='book' wx:for="{{rows}}" wx:key="isbd13">
+            <image src='{{item.image}}'></image>
+            <text>{{item.title}}</text>
+          </view>
         </view>
       </view>
     </view>
 
     <view class='book-section'>
-      <text class='section-header'></text>
-      <view class="books"></view>
-    </view>
-
-    <view class='book-section'>
-      <text class='section-header'></text>
-      <view class="boos"></view>
+      <view class='section-header'><text>最新书籍</text></view>
+      <view class="books">
+        <view class='books-row' wx:for="{{books}}" wx:for-item="rows" wx:key="*this">
+          <view class='book' wx:for="{{rows}}" wx:key="isbd13">
+            <image src='{{item.image}}'></image>
+            <text>{{item.title}}</text>
+          </view>
+        </view>
+      </view>
     </view>
 
   </scroll-view>

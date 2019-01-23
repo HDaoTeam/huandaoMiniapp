@@ -1,0 +1,26 @@
+<tab-pro tabs="{{tabs}}" selected="计算机"></tab-pro>
+<scroll-view class="content" scroll-y>
+  <view class='header'>
+    <image src='{{tab.image}}'></image>
+    <view class='infor'>
+      <text>{{tab.title}}</text>
+      <text>{{tab.onSale}}</text>
+    </view>
+  </view>
+  <view class='books'>
+    <view class='book' wx:for="{{tab.books}}" wx:key="isbn13">
+      <view class='left'><image src="{{item.image}}"></image></view>
+      <view class='right'>
+        <view class='right-top'>
+          <image src='{{item.image}}' class='avatar'></image>
+          <text>{{item.title}}</text>
+          <text>{{item.author}}</text>
+        </view>
+        <view class='right-bottom'>
+          <text>{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</scroll-view>

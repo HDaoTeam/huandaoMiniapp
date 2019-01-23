@@ -1,0 +1,99 @@
+/* miniprogram/pages/category/category.wxss */
+tab-pro {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+}
+.content {
+  padding-top: 70rpx;
+}
+.header {
+  position: relative;
+  width: 100%;
+  height: 500rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+}
+
+
+.header image {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  height: 370rpx;
+}
+
+.header .infor {
+  position: relative;
+  width: 300rpx;
+  height: 200rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 10rpx 20rpx rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #999;
+  background-color: white;
+  top: 100rpx;
+  
+}
+.header .infor text:first-of-type {
+  font-weight: bold;
+  font-size: 23px;
+  color: #333;
+}
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+.book .left{
+  width: 200rpx;
+  height: 280rpx;
+}
+.book .left image {
+  width: 100%;
+  height: 100%;
+}
+.book .right {
+  margin-left: 20rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book .avatar {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 60rpx;
+  box-shadow: 5rpx 5rpx 5rpx rgba(0, 0, 0, 0.08);
+  right: 30rpx;
+  top: 20rpx;
+}
+.book .right-bottom {
+  color: #ffc09f;
+}
+.book .right .right-top {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: #666;
+  font-size: 14px;
+}
+.book .right .right-top text:first-of-type {
+  font-size: 17px;
+  color: #333;
+}

@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "image-pro": "../../common/components/image/image-pro"
+  }
+}

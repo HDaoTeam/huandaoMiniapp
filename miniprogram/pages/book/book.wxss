@@ -47,13 +47,13 @@
   width: 200rpx;
 }
 
+
 .info {
-  width: 100%;
   height: 100%;
   background-color: white;
   color: #333;
+  border-top: 1px solid #eee; 
   padding: 30rpx;
-  border-top: 1px solid #eee;
 }
 
 .info .title {
@@ -125,6 +125,20 @@
   width: 15px;
   height: 15px;
   margin-top: 34rpx;
+}
+
+.detail {
+  margin-top: 30rpx;
+}
+.detail .header-text  {
+  font-size: 17px;
+  font-weight: bold;
+  display: block;
+}
+.detail text:last-of-type {
+  color: #666;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .related {

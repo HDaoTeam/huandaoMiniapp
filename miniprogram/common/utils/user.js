@@ -4,22 +4,7 @@ function login() {
     wx.login({
       success: res => {
         console.log("login code:",res);
-        wx.cloud.callFunction({
-          name: "user",
-          data: {
-            "method": "login",
-            "params": {
-              "code": res.code
-            }
-          },
-          success: res => {
-            getUserInfo();
-            resolve(res)
-          },
-          fail: err => {
-            reject(err)
-          }
-        })
+        getUserInfo();
       },
       fail: err => {
         reject(err)
@@ -34,7 +19,6 @@ function getUserInfo() {
       success(res) {
         console.log("profilr right", res)
         if (res.authSetting['scope.userInfo']) {
-
           // 已经授权，可以直接调用 getUserInfo 获取头像昵
           wx.getUserInfo({
             success: function (res) {
@@ -45,6 +29,8 @@ function getUserInfo() {
               reject(err)
             }
           })
+        }else {
+          
         }
       },
       fail: err => {
@@ -57,7 +43,7 @@ function getUserInfo() {
 
 function updateUserInfo(params) {
   console.log('user profile:',params)
-  return api.fetchApi('user',"upsert",params)
+  // return api.fetchApi('user',"upsert",params)
 }
 
 module.exports = {

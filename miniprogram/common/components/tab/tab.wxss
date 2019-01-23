@@ -1,0 +1,25 @@
+/* common/components/tab/tab.wxss */
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  padding: 10rpx;
+  border-bottom: 1px solid #eee;
+}
+.tab-item {
+  justify-content: center;
+  align-items: centerl;
+  padding: 18rpx 20rpx;
+  color: #666;
+  font-size: 18px;
+  display: inline-flex;
+}
+.selected {
+  color: #222;
+}
+.hover {
+  background-color: #eee;
+}
+

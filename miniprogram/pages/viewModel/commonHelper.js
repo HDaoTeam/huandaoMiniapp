@@ -1,7 +1,8 @@
 
 var helper = require('../../common/utils/util.js')
 var staticKey = {
-  waitUploadBooks: "wait-upload-book"
+  waitUploadBooks: "wait-upload-book",
+  userInfo: "user-info"
 }
 function getWaitUploadBooksCache() {
   var arr = wx.getStorageSync(staticKey.waitUploadBooks);
@@ -42,8 +43,21 @@ function deleleWaitUploadBooksCache(book) {
   return index > -1;
 }
 
+function saveUserInfo(userInfo) {
+  if (userInfo) {
+    console.log('save', userInfo)
+    wx.setStorageSync(staticKey.userInfo, userInfo)
+  }
+}
+function getCachedUserInfo() {
+  return wx.getStorageSync(staticKey.userInfo)
+}
+
 module.exports = {
   getWaitUploadBooksCache,
   addWaitUploadBooksCache,
-  deleleWaitUploadBooksCache
+  deleleWaitUploadBooksCache,
+
+  saveUserInfo,
+  getCachedUserInfo
 }

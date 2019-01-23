@@ -1,0 +1,6 @@
+<!--common/components/tab/tab.wxml-->
+<scroll-view class='tab' scroll-x>
+  <view class='tab-item {{item.title == selected ? "selected": ""}}' wx:for="{{tabs}}" wx:ke="title" hover-class='hover' bindtap='clickTab' data-item="{{item}}">
+    <text>{{item.title}}</text>
+  </view>
+</scroll-view>

@@ -31,12 +31,20 @@
         </view>
       </view>
       
-      <view class='detail' wx:for="{{}}">
-        <text>书籍简介</text>
-        <text>{{}}</text>
-        <view class='fold'>
+      <view class='detail'>
+        <text class='header-text'>书籍简介</text>
+        <text>{{book.summary}}</text>
+        <!-- <view class='fold'>
           <text>{{}}</text>
-        </view>
+        </view> -->
+      </view>
+
+      <view class='detail'>
+        <text class='header-text'>作者简介</text>
+        <text>{{book.author_intro}}</text>
+        <!-- <view class='fold'>
+          <text>{{}}</text>
+        </view> -->
       </view>
 
       <view class='related'>

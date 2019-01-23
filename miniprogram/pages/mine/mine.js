@@ -1,25 +1,62 @@
 // miniprogram/pages/mine/mine.js
+var helper = require('../viewModel/commonHelper.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    ifLogin:false,
+  },
+  bindGetUserInfo(res) {
+    var info = res.detail.userInfo;
+    var app = getApp();
+    if (info) {
+      app.globalData.userInfo = info;
+      this.setData({
+        ifLogin: true,
+        userInfo: app.globalData.userInfo
+      })
+      helper.saveUserInfo(info)
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var items = [
+      {
+        "image":"../../images/help.png",
+        "key" :"常见问题",
 
+
+      },
+      {
+        "image": "../../images/lianxiwomen.png",
+        "key": "联系我们",
+      },
+    ]
+    this.setData({
+      items:items
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    var app = getApp();
+    if (app.globalData.userInfo) {
+      this.setData({
+        ifLogin: true,
+        userInfo: app.globalData.userInfo
+      })
+    }else {
+      this.setData({
+        ifLogin: false
+      })
+    }
   },
 
   /**

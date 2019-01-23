@@ -1,44 +1,40 @@
 {
   "cloud": true,
   "pages": [
+    "pages/home/home",
     "pages/book/book",
     "pages/add/add",
-    "pages/home/home",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/category/category"
   ],
   "tabBar": {
     "selectedColor": "#666666",
     "color": "#aaaaaa",
     "backgroundColor": "#FFFFFF",
     "list": [
-
-      {
-        "pagePath": "pages/book/book",
-        "text": "书籍",
-        "iconPath": "images/shuji-unselected.png",
-        "selectedIconPath": "images/shuji-selected.png"
-        
-      },
-      {
-        "pagePath": "pages/add/add",
-        "text": "换书",
-        "iconPath": "images/gouwuche-unselected.png",
-        "selectedIconPath": "images/gouwuche-selected.png"
-        
-      },
       {
         "pagePath": "pages/home/home",
         "text": "首页",
         "iconPath": "images/shouye-unselected.png",
         "selectedIconPath": "images/shouye-selected.png"
-        
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "换书",
+        "iconPath": "images/shuji-unselected.png",
+        "selectedIconPath": "images/shuji-selected.png"
+      },
+      {
+        "pagePath": "pages/book/book",
+        "text": "购物车",
+        "iconPath": "images/gouwuche-unselected.png",
+        "selectedIconPath": "images/gouwuche-selected.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
         "iconPath": "images/wodejuhuasuan-unselected.png",
         "selectedIconPath": "images/wodejuhuasuan-selected.png"
-        
       }
     ]
   },
