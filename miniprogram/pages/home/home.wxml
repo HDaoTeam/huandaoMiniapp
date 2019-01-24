@@ -1,10 +1,10 @@
 <view class='container'>
   <view class='nav-bar'>
-    <view class='search'>
+    <view class='search' bindtap='clickSearch'>
       <image src='../../images/sousuo.png'></image>
       <text>查找</text>
     </view>
-    <view class='locate'>
+    <view class='locate' bindtap='clickLocate'>
       <image src='../../images/wxbdingwei.png'></image>
       <text>三峡大学</text>
     </view>

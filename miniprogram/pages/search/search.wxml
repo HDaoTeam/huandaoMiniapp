@@ -1,0 +1,36 @@
+<view class="container">
+  <view class='content'>
+    <view class='nav-bar'>
+      <view class='search'>
+        <image src='../../images/sousuo.png'></image>
+        <input focus placeholder='输入书籍' bindinput='didInput' value='{{inputString}}'></input>
+      </view>
+      <view class='action' bindtap='clickSearch'>
+        <text>搜索</text>
+      </view>
+    </view>
+    <view class='hot' wx:if="{{books.length ==0}}">
+      <text>大家都在搜</text>
+      <view class='hot-book'>
+        <view wx:for="{{hot}}" class='hot-book-title' bindtap='clickHot' data-title="{{item}}" wx:ke="*this">
+          <text>{{item}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='books' wx:if="{{books.length > 0}}">
+      <view class='book' wx:for="{{books}}" hover-class='hover'>
+        <image src='{{item.image}}'></image>
+        <view class='info'>
+          <view class='info-top'>
+            <text>{{item.title}}</text>
+            <text>{{item.author}}</text>
+          </view>
+          <text>{{item.price}}</text>
+          <view class='cart' bindtap='addCart' data-item="{{item}}">
+            <text>加入购物车</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

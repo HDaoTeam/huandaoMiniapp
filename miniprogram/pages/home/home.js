@@ -84,7 +84,16 @@ Page({
       url: '../category/category',
     })
   },
-
+  clickLocate(e) {
+    wx.navigateTo({
+      url: '../local/local',
+    })
+  },
+  clickSearch(e) {
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

@@ -1,0 +1,146 @@
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.nav-bar {
+  height: 100rpx;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  background-color: #a3a380;
+  z-index: 1000;
+}
+
+.search {
+  flex: 1;
+  height: 70rpx;
+  border-radius: 70rpx;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.search image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.search input {
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+.action {
+  width: 80rpx;
+  margin-left: 20rpx;
+  font-size: 16px;
+  color: white;
+}
+
+.hot {
+  margin-top: 100rpx;
+}
+
+.hot>text:first-of-type {
+  color: #999;
+  font-size: 12px;
+  line-height: 80rpx;
+  margin-left: 20rpx;
+}
+
+.hot .hot-book {
+  display: flex;
+  flex-direction: row;
+  padding-left: 20rpx;
+  flex-wrap: wrap;
+}
+
+.hot-book-title {
+  padding: 10rpx 16rpx;
+  color: #666;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 8rpx;
+  margin-right: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.books {
+  margin-top: 100rpx;
+}
+
+.book {
+  width: 100%;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.book image {
+  width: 120rpx;
+  height: 180rpx;
+}
+.hover {
+  background-color: #eee;
+}
+.book .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 180rpx;
+  margin-left: 30rpx;
+  justify-content: space-between;
+}
+.book .info .info-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.book .info .info-top>text:first-of-type {
+  color: #333;
+  font-size: 16px;
+}
+
+.book .info .info-top>text:nth-child(2) {
+  color: #999;
+  font-size: 14px;
+}
+
+.book .info>text:nth-child(3) {
+  color: #333;
+  font-size: 16px;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+}
+
+.book .info .cart {
+  position: absolute;
+  right: 30rpx;
+  bottom: 20rpx;
+  width: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  background-color: #ffc09f;
+  border-radius: 50rpx;
+  height: 50rpx;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+}
